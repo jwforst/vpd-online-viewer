@@ -1,0 +1,717 @@
+/* ========================================================================= */
+/* filegroupName: ViewportDocs Framework 001                                 */
+/*                                                                           */
+/* This is a part of a template filegroup. A filegroup contains all HTML,    */
+/* CSS, and JS files needed to create a specific viewport document. Fork     */
+/* this filegroup to create new template filegroups.                         */
+/* ========================================================================= */
+
+/* These are development styles. This file is useful for temporarilly adding 
+/* borders or background colors to elements during development. Remove these CSS classes and and the link to this file from production html files.        */
+
+/* ========== borders ==========*/
+
+/* ===== gray ===== */
+.bdr-blk {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: black;
+}
+
+.bdr-gray-10 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 10%);
+}
+
+.bdr-gray-20 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 20%);
+}
+
+.bdr-gray-30 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 30%);
+}
+
+.bdr-gray-40 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 40%);
+}
+
+.bdr-gray-50 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 50%);
+}
+
+.bdr-gray-60 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 60%);
+}
+
+.bdr-gray-70 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 70%);
+}
+
+.bdr-gray-80 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 80%);
+}
+
+.bdr-gray-90 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 90%);
+}
+
+.bdr-wht {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 0%, 100%);
+}
+
+/* ===== red ===== */
+
+.bdr-red-10 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 10%);
+}
+
+.bdr-red-20 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 20%);
+}
+
+.bdr-red-30 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 30%);
+}
+
+
+.bdr-red-40 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 40%);
+}
+
+.bdr-red-50 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 50%);
+}
+
+.bdr-red-60 {
+  border-width: 5px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 60%);
+}
+
+.bdr-red-70 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 70%);
+}
+
+.bdr-red-80 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 80%);
+}
+
+.bdr-red-90 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(0, 100%, 90%);
+}
+
+/* ===== green ===== */
+
+.bdr-grn-10 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 10%);
+}
+
+.bdr-grn-20 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 20%);
+}
+
+.bdr-grn-30 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 30%);
+}
+
+.bdr-grn-40 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 40%);
+}
+
+.bdr-grn-50 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 50%);
+}
+
+.bdr-grn-60 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 60%);
+}
+
+.bdr-grn-70 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 70%);
+}
+
+.bdr-grn-80 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 80%);
+}
+
+.bdr-grn-90 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(120, 100%, 90%);
+}
+
+/* ===== blue ===== */
+
+.bdr-blu-10 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 50%);
+}
+
+.bdr-blu-20 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 20%);
+}
+
+.bdr-blu-30 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 30%);
+}
+
+.bdr-blu-40 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 40%);
+}
+
+.bdr-blu-50 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 50%);
+}
+
+.bdr-blu-60 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 60%);
+}
+
+.bdr-blu-70 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 70%);
+}
+
+.bdr-blu-80 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 80%);
+}
+
+.bdr-blu-90 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(240, 100%, 90%);
+}
+
+/* ===== cyan ===== */
+
+.bdr-cyan-10 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 10%);
+}
+
+.bdr-cyan-20 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 20%);
+}
+
+.bdr-cyan-30 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 30%);
+}
+
+.bdr-cyan-40 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 40%);
+}
+
+.bdr-cyan-50 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 50%);
+}
+
+.bdr-cyan-60 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 60%);
+}
+
+.bdr-cyan-70 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 70%);
+}
+
+.bdr-cyan-80 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 80%);
+}
+
+.bdr-cyan-90 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(180, 100%, 90%);
+}
+
+/* ===== magenta ===== */
+
+.bdr-mag-10 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 10%);
+}
+
+.bdr-mag-20 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 20%);
+}
+
+.bdr-mag-30 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 30%);
+}
+
+.bdr-mag-40 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 40%);
+}
+
+.bdr-mag-50 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 50%);
+}
+
+.bdr-mag-60 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 60%);
+}
+
+.bdr-mag-70 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 70%);
+}
+
+.bdr-mag-80 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 80%);
+}
+
+.bdr-mag-90 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(300, 100%, 90%);
+}
+
+/* ===== yellow ===== */
+
+.bdr-yel-10 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 10%);
+}
+
+.bdr-yel-20 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 20%);
+}
+
+.bdr-yel-30 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 30%);
+}
+
+.bdr-yel-40 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 40%);
+}
+
+.bdr-yel-50 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 50%);
+}
+
+.bdr-yel-60 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 60%);
+}
+
+.bdr-yel-70 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 70%);
+}
+
+.bdr-yel-80 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 80%);
+}
+
+.bdr-yel-90 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: hsl(60, 100%, 90%);
+}
+
+/* ========== backgrounds========== */
+
+/* ===== gray ===== */
+.bg-blk {
+  background-color: black;
+}
+
+.bg-gray-10 {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.bg-gray-20 {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.bg-gray-30 {
+  background-color: hsl(0, 0%, 30%);
+}
+
+.bg-gray-40 {
+  background-color: hsl(0, 0%, 40%);
+}
+
+.bg-gray-50 {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.bg-gray-60 {
+  background-color: hsl(0, 0%, 60%);
+}
+
+.bg-gray-70 {
+  background-color: hsl(0, 0%, 70%);
+}
+
+.bg-gray-80 {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.bg-gray-90 {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.bg-wht {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* ===== red ===== */
+
+.bg-red-10 {
+  background-color: hsl(0, 100%, 10%);
+}
+
+.bg-red-20 {
+  background-color: hsl(0, 100%, 20%);
+}
+
+.bg-red-30 {
+  background-color: hsl(0, 100%, 30%);
+}
+
+
+.bg-red-40 {
+  background-color: hsl(0, 100%, 40%);
+}
+
+.bg-red-50 {
+  background-color: hsl(0, 100%, 50%);
+}
+
+.bg-red-60 {
+  background-color: hsl(0, 100%, 60%);
+}
+
+.bg-red-70 {
+  background-color: hsl(0, 100%, 70%);
+}
+
+.bg-red-80 {
+  background-color: hsl(0, 100%, 80%);
+}
+
+.bg-red-90 {
+  background-color: hsl(0, 100%, 90%);
+}
+
+/* ===== green ===== */
+
+.bg-grn-10 {
+  background-color: hsl(120, 100%, 10%);
+}
+
+.bg-grn-20 {
+  background-color: hsl(120, 100%, 20%);
+}
+
+.bg-grn-30 {
+  background-color: hsl(120, 100%, 30%);
+}
+
+.bg-grn-40 {
+  background-color: hsl(120, 100%, 40%);
+}
+
+.bg-grn-50 {
+  background-color: hsl(120, 100%, 50%);
+}
+
+.bg-grn-60 {
+  background-color: hsl(120, 100%, 60%);
+}
+
+.bg-grn-70 {
+  background-color: hsl(120, 100%, 70%);
+}
+
+.bg-grn-80 {
+  background-color: hsl(120, 100%, 80%);
+}
+
+.bg-grn-90 {
+  background-color: hsl(120, 100%, 90%);
+}
+
+/* ===== blue ===== */
+
+.bg-blu-10 {
+  background-color: hsl(240, 100%, 50%);
+}
+
+.bg-blu-20 {
+  background-color: hsl(240, 100%, 20%);
+}
+
+.bg-blu-30 {
+  background-color: hsl(240, 100%, 30%);
+}
+
+.bg-blu-40 {
+  background-color: hsl(240, 100%, 40%);
+}
+
+.bg-blu-50 {
+  background-color: hsl(240, 100%, 50%);
+}
+
+.bg-blu-60 {
+  background-color: hsl(240, 100%, 60%);
+}
+
+.bg-blu-70 {
+  background-color: hsl(240, 100%, 70%);
+}
+
+.bg-blu-80 {
+  background-color: hsl(240, 100%, 80%);
+}
+
+.bg-blu-90 {
+  background-color: hsl(240, 100%, 90%);
+}
+
+/* ===== cyan ===== */
+
+.bg-cyan-10 {
+  background-color: hsl(180, 100%, 10%);
+}
+
+.bg-cyan-20 {
+  background-color: hsl(180, 100%, 20%);
+}
+
+.bg-cyan-30 {
+  background-color: hsl(180, 100%, 30%);
+}
+
+.bg-cyan-40 {
+  background-color: hsl(180, 100%, 40%);
+}
+
+.bg-cyan-50 {
+  background-color: hsl(180, 100%, 50%);
+}
+
+.bg-cyan-60 {
+  background-color: hsl(180, 100%, 60%);
+}
+
+.bg-cyan-70 {
+  background-color: hsl(180, 100%, 70%);
+}
+
+.bg-cyan-80 {
+  background-color: hsl(180, 100%, 80%);
+}
+
+.bg-cyan-90 {
+  background-color: hsl(180, 100%, 90%);
+}
+
+/* ===== magenta ===== */
+
+.bg-mag-10 {
+  background-color: hsl(300, 100%, 10%);
+}
+
+.bg-mag-20 {
+  background-color: hsl(300, 100%, 20%);
+}
+
+.bg-mag-30 {
+  background-color: hsl(300, 100%, 30%);
+}
+
+.bg-mag-40 {
+  background-color: hsl(300, 100%, 40%);
+}
+
+.bg-mag-50 {
+  background-color: hsl(300, 100%, 50%);
+}
+
+.bg-mag-60 {
+  background-color: hsl(300, 100%, 60%);
+}
+
+.bg-mag-70 {
+  background-color: hsl(300, 100%, 70%);
+}
+
+.bg-mag-80 {
+  background-color: hsl(300, 100%, 80%);
+}
+
+.bg-mag-90 {
+  background-color: hsl(300, 100%, 90%);
+}
+
+/* ===== yellow ===== */
+
+.bg-yel-10 {
+  background-color: hsl(60, 100%, 10%);
+}
+
+.bg-yel-20 {
+  background-color: hsl(60, 100%, 20%);
+}
+
+.bg-yel-30 {
+  background-color: hsl(60, 100%, 30%);
+}
+
+.bg-yel-40 {
+  background-color: hsl(60, 100%, 40%);
+}
+
+.bg-yel-50 {
+  background-color: hsl(60, 100%, 50%);
+}
+
+.bg-yel-60 {
+  background-color: hsl(60, 100%, 60%);
+}
+
+.bg-yel-70 {
+  background-color: hsl(60, 100%, 70%);
+}
+
+.bg-yel-80 {
+  background-color: hsl(60, 100%, 80%);
+}
+
+.bg-yel-90 {
+  background-color: hsl(60, 100%, 90%);
+}
+
+/* for temporarily assigning theme colors  */
+.bg-color-surface01 {
+  background-color: var(--color-surface01);
+}
+
+.bg-color-surface02 {
+  background-color: var(--color-surface02);
+}
+
+.bg-color-surface03 {
+  background-color: var(--color-surface03);
+}
+
+.bg-color-accent01 {
+  background-color: var(--color-accent01);
+}
+
+.bg-color-accent02 {
+  background-color: var(--color-accent02);
+}
+
+.bg-color-accent03 {
+  background-color: var(--color-accent03);
+}

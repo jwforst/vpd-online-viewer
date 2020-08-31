@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html lang="en" id="rootElement" class="fontFamily0 colorTheme0">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+
+    <title>ViewportDoc Editor</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ViewportDoc fonts -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Michroma&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto+Mono&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Libre+Franklin:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- ViewportDoc CSS -->
+    <link rel="stylesheet" type="text/css" href="assets\css\normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets\css\development.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets\css\theme.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets\css\typography.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets\css\layout.css" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body class="body-grid">
+    <!-- header -->
+
+    <header class="">
+      <div class="control-area">
+        <!-- TOC button and icon -->
+        <a
+          id="tocButton"
+          class="button-area"
+          type="button"
+          title="Show/Hide Table of Contents"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24   24"
+            width="24"
+          >
+            <g class="control-icon" fill="var(--color-text-s01)" stroke="none">
+              <path d="M0 0h24v24H0V0z" stroke="none" fill="none"></path>
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Setup button and icon -->
+        <a
+          id="setupButton"
+          class="button-area"
+          type="button"
+          title="Show/Hide Content Templates, Font Families, and colorTheme Setup"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              fill="var(--color-text-s01)"
+              d="M6.21 13.97l1.2 2.07c.08.13.23.18.37.13l1.49-.6c.31.24.64.44 1.01.59l.22 1.59c.03.14.15.25.3.25h2.4c.15 0 .27-.11.3-.26l.22-1.59c.36-.15.7-.35 1.01-.59l1.49.6c.14.05.29 0 .37-.13l1.2-2.07c.08-.13.04-.29-.07-.39l-1.27-.99c.03-.19.04-.39.04-.58 0-.2-.02-.39-.04-.59l1.27-.99c.11-.09.15-.26.07-.39l-1.2-2.07c-.08-.13-.23-.18-.37-.13l-1.49.6c-.31-.24-.64-.44-1.01-.59l-.22-1.59c-.03-.14-.15-.25-.3-.25h-2.4c-.15 0-.27.11-.3.26l-.22 1.59c-.36.15-.71.34-1.01.58l-1.49-.6c-.14-.05-.29 0-.37.13l-1.2 2.07c-.08.13-.04.29.07.39l1.27.99c-.03.2-.05.39-.05.59 0 .2.02.39.04.59l-1.27.99c-.11.1-.14.26-.06.39zM12 10.29c.94 0 1.71.77 1.71 1.71s-.77 1.71-1.71 1.71-1.71-.77-1.71-1.71.77-1.71 1.71-1.71zM19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm0 16H5V5h14v14z"
+            />
+          </svg>
+        </a>
+
+        <!-- start new document -->
+        <a
+          id="newButton"
+          class="button-area"
+          type="button"
+          title="Start New Document"
+        >
+          <!-- icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              fill="var(--color-text-s01)"
+              d="M13 11h-2v3H8v2h3v3h2v-3h3v-2h-3zm1-9H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"
+            />
+          </svg>
+        </a>
+
+        <!-- open document -->
+        <a
+          id="openButton"
+          class="button-area"
+          type="button"
+          title="Open Document"
+        >
+          <!-- icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              fill="var(--color-text-s01)"
+              d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3zm-5.55-8h-2.9v3H8l4 4 4-4h-2.55z"
+            />
+          </svg>
+        </a>
+
+        <!-- save document -->
+        <a
+          id="saveButton"
+          class="button-area"
+          type="button"
+          title="Save Document"
+        >
+          <!-- icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              fill="var(--color-text-s01)"
+              d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3zM8 13h2.55v3h2.9v-3H16l-4-4z"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- doc title -->
+      <div class="title-area">
+        <h1 class="doc-title">
+          ViewportDoc Editor
+        </h1>
+      </div>
+
+      <!-- logo -->
+      <div class="logo-area">
+        <img
+          class="logo"
+          src="assets\images\JourneyLogoV4_600x123.png "
+          alt="logo"
+        />
+      </div>
+    </header>
+    <!--  end header -->
+
+    <!-- div.drawer (contains asides and main) -->
+    <div class="drawer">
+      <!-- toc aside (contains table of contents and doc info) -->
+      <aside id="tocAside" class="aside-area-toc">
+        <!-- ===== ===== toc card ===== ===== -->
+        <section id="tocSection" class="toc-card">
+          <h1 class="card-title">
+            Table of Contents
+          </h1>
+          <p class="toc-1"><a href="#overview">What is a Viewport Doc?</a></p>
+          <p class="toc-1"><a href="#overview">Why use a Viewport Doc?</a></p>
+          <p class="toc-1"><a href="#examples">Viewport Doc Examples</a></p>
+          <p class="toc-1"><a href="#workspace">Setting Up a Workspace</a></p>
+          <p class="toc-1"><a href="#create">Creating a Viewport Doc</a></p>
+          <p class="toc-1"><a href="#publish">Publishing a Viewport Doc</a></p>
+          <p class="toc-1"><a href="#library">Managing the Workspace</a></p>
+          <p class="toc-1"><a href="#development">Development Page</a></p>
+          <p class="toc-1"><a href="#contact">Contact Information</a></p>
+        </section>
+        <!-- end toc card -->
+
+        <!-- ===== ===== doc info card ===== ===== -->
+        <section id="docInfoSection" class="doc-info-card">
+          <h1 class="card-title">
+            Document Information
+          </h1>
+          <dt class="doc-info">Title:</dt>
+          <dd class="doc-info">Viewport-Based Document Template</dd>
+          <dt class="doc-info">Doc ID:</dt>
+          <dd class="doc-info">to be assigned</dd>
+          <dt class="doc-info">Version:</dt>
+          <dd class="doc-info">Draft</dd>
+          <dt class="doc-info">Copyright:</dt>
+          <dd class="doc-info">Copyright &copy; 2019 Journey ViewportDocs</dd>
+          <dt class="doc-info">Author:</dt>
+          <dd class="doc-info">James Forst</dd>
+          <dt class="doc-info">Organization:</dt>
+          <dd class="doc-info">TBD</dd>
+        </section>
+        <!-- end doc info card -->
+      </aside>
+      <!-- end toc aside -->
+
+      <!-- setup aside (content structure template, font families and color themes) -->
+      <aside id="setupAside" class="aside-area-setup">
+
+        <!-- ===== ===== content structure card ===== ===== -->
+        <section id="themeSettingsSection" class="settings-card">
+          <h1 class="card-title">
+            Content Structure Snippets
+          </h1>
+          <form>
+            <fieldset class="fieldset-flex">
+              <legend>Select a Starting Content Structure</legend>
+              <label class="radio-label" for="structure0">
+                <input
+                  type="radio"
+                  name="structureCollection"
+                  id="contentStructure0"
+                  value="structure0"
+                  onchange="structureCollectionClicked(0)"
+                />
+                Blank
+              </label>
+              <label class="radio-label" for="structure1">
+                <input
+                  type="radio"
+                  name="structureCollection"
+                  id="contentStructure1"
+                  value="structure1"
+                  onchange="contentStructureClicked(1)"
+                />
+                Elements (Paragraph and Character Styles)
+              </label>
+              <label class="radio-label" for="structure2">
+                <input
+                  type="radio"
+                  name="structureCollection"
+                  id="contentStructure2"
+                  value="structure2"
+                  onchange="contentStructureClicked(2)"
+                />
+                Manufacturing Instructions
+              </label>
+              <label class="radio-label" for="structure3">
+                <input
+                  type="radio"
+                  name="structureCollection"
+                  id="contentStructure3"
+                  value="structure3"
+                  onchange="contentStructureClicked(3)"
+                />
+                Maintenance Instructions
+              </label>
+              <label class="radio-label" for="structure4">
+                <input
+                  type="radio"
+                  name="structureCollection"
+                  id="contentStructure4"
+                  value="structure4"
+                  onchange="contentStructureClicked(4)"
+                />
+                Software Tutorial
+              </label>
+              <label class="radio-label" for="structure5">
+                <input
+                  type="radio"
+                  name="structureCollection"
+                  id="contentStructure5"
+                  value="structure5"
+                  onchange="contentStructureClicked(5)"
+                />
+                User Guide
+              </label>
+              <label class="radio-label" for="structure6">
+                <input
+                  type="radio"
+                  name="structureCollection"
+                  id="contentStructure6"
+                  value="structure6"
+                  onchange="contentStructureClicked(6)"
+                />
+                Application Note
+              </label>
+            </fieldset>
+          </form>
+        </section>
+        <!-- content structure card -->
+
+        <!-- ===== ===== font family card ===== ===== -->
+        <section id="fontSettingsSection" class="settings-card">
+          <h1 class="card-title">
+            Font Family
+          </h1>
+          <form>
+            <fieldset class="fieldset-flex">
+              <legend>Select a font family pair</legend>
+              <!--  -->
+              <label class="radio-label" for="fontFamily0">
+                <input
+                  type="radio"
+                  name="fontCollection"
+                  id="fontFamily0"
+                  value="fontFamily0"
+                  onchange="fontFamilyClicked(0)"
+                />
+                Michroma/Raleway
+              </label>
+              <label class="radio-label" for="fontFamily1">
+                <input
+                  type="radio"
+                  name="fontCollection"
+                  id="fontFamily1"
+                  value="fontFamily1"
+                  onchange="fontFamilyClicked(1)"
+                />
+                Libre Baskerville/Roboto
+              </label>
+              <label class="radio-label" for="fontFamily2">
+                <input
+                  type="radio"
+                  name="fontCollection"
+                  id="fontFamily2"
+                  value="fontFamily2"
+                  onchange="fontFamilyClicked(2)"
+                />
+                Philosopher/Libre Franklin
+              </label>
+            </fieldset>
+          </form>
+        </section>
+        <!-- end font family card -->
+
+        <!-- ===== ===== color theme card ===== ===== -->
+        <section id="themeSettingsSection" class="settings-card">
+          <h1 class="card-title">
+            Color Theme
+          </h1>
+          <form>
+            <fieldset class="fieldset-flex">
+              <legend>Select a color theme</legend>
+              <label class="radio-label" for="theme0">
+                <input
+                  type="radio"
+                  name="themeCollection"
+                  id="colorTheme0"
+                  value="colorTheme0"
+                  onchange="colorThemeClicked(0)"
+                />
+                Sunny Gray
+              </label>
+              <label class="radio-label" for="theme1">
+                <input
+                  type="radio"
+                  name="themeCollection"
+                  id="colorTheme1"
+                  value="colorTheme1"
+                  onchange="colorThemeClicked(1)"
+                />
+                Stormy Gray
+              </label>
+              <label class="radio-label" for="theme2">
+                <input
+                  type="radio"
+                  name="themeCollection"
+                  id="colorTheme2"
+                  value="colorTheme2"
+                  onchange="colorThemeClicked(2)"
+                />
+                Thunderhead
+              </label>
+              <label class="radio-label" for="theme3">
+                <input
+                  type="radio"
+                  name="themeCollection"
+                  id="colorTheme3"
+                  value="colorTheme3"
+                  onchange="colorThemeClicked(3)"
+                />
+                Manilla
+              </label>
+              <label class="radio-label" for="theme4">
+                <input
+                  type="radio"
+                  name="themeCollection"
+                  id="colorTheme4"
+                  value="colorTheme4"
+                  onchange="colorThemeClicked(4)"
+                />
+                Spruce
+              </label>
+              <label class="radio-label" for="theme5">
+                <input
+                  type="radio"
+                  name="themeCollection"
+                  id="colorTheme5"
+                  value="colorTheme5"
+                  onchange="colorThemeClicked(5)"
+                />
+                Batcave
+              </label>
+              <label class="radio-label" for="theme6">
+                <input
+                  type="radio"
+                  name="themeCollection"
+                  id="colorTheme6"
+                  value="colorTheme6"
+                  onchange="colorThemeClicked(6)"
+                />
+                Radium
+              </label>
+            </fieldset>
+          </form>
+        </section>
+        <!-- end color theme card -->
+
+      </aside>
+      <!-- end setup aside -->
+
+      <!-- main -->
+      <main class="main-grid">
+        <!-- Editor.js instance located here -->
+        <div id="editorjs">
+
+          
+
+        </div>
+        <!-- end editor wrapper -->
+      </main>
+      <!-- end main -->
+    </div>
+    <!-- end div.drawer -->
+
+    <!-- footer -->
+    <footer>
+      <p class="foot-head">Copyright &copy; 2020 Journey ViewportDocs</p>
+    </footer>
+    <!--  end footer -->
+
+    <!-- ===== ===== ===== ===== JavaScript ===== ===== ===== =====  -->
+    <!-- ViewportDoc Editor new content dropdown-menu control -->
+    <!-- <script src="./assets/js/new-dropdown.js"></script> -->
+
+    <!-- ViewportDoc Editor slide-out menu control -->
+    <script src="./assets/js/controlVDE.js"></script>
+
+    <!-- EditorJs load tools scripts -->
+    <!-- Header -->
+    <script
+      src="./assets/editorjs/header/bundle.js"
+      onload="document.getElementById('hint').hidden = true"
+    ></script>
+
+    <!-- Image -->
+    <script src="./assets/editorjs/simple-image/bundle.js"></script>
+
+    <!-- Delimiter -->
+    <script src="./assets/editorjs/delimiter/bundle.js"></script>
+
+    <!-- List -->
+    <script src="./assets/editorjs/list/bundle.js"></script>
+
+    <!-- Checklist -->
+    <script src="./assets/editorjs/checklist/bundle.js"></script>
+
+    <!-- Quote -->
+    <script src="./assets/editorjs/quote/bundle.js"></script>
+
+    <!-- Code -->
+    <script src="./assets/editorjs/code/bundle.js"></script>
+
+    <!-- Embed -->
+    <script src="./assets/editorjs/embed/bundle.js"></script>
+
+    <!-- Table -->
+    <script src="./assets/editorjs/table/bundle.js"></script>
+
+    <!-- Link -->
+    <script src="./assets/editorjs/link/bundle.js"></script>
+
+    <!-- Raw -->
+    <script src="./assets/editorjs/raw/bundle.js"></script>
+
+    <!-- Warning -->
+    <script src="./assets/editorjs/warning/bundle.js"></script>
+
+    <!-- Marker -->
+    <script src="./assets/editorjs/marker/bundle.js"></script>
+
+    <!-- Inline Code -->
+    <script src="./assets/editorjs/inline-code/bundle.js"></script>
+
+    <!-- Load Editor.js's Core -->
+    <script src="./assets/editorjs/editor.js"></script>
+
+    <!-- Load Editor.Js Initialization -->
+    <!-- This script is the primary entry point for Editor.js. See the package.json key/value pair ("main": "index.js") -->
+    <script src="./assets/editorjs/index.js"></script>
+  </body>
+</html>

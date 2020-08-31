@@ -1,0 +1,349 @@
+/* FONT FAMILIES AND COLOR THEMES */
+
+/* HTML Root Element Classes
+The <html> element in index.html line 3 is the root element where fontFamily0 and colorTheme0 are assigned as fallback classes. */ 
+
+/* DOM Class List
+JavaScript is used to manage setup and user-selection of font family and theme assignment to the DOM classList. The DOM classList contains The initial startup classes and then the user-selected classes*/
+
+/* FONT FACES */
+
+/* Headings */
+@font-face {
+  font-family: "Michroma";
+  src: url(../fonts/Michroma-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(../fonts/LibreBaskerville-Regular.ttf),
+       url(../fonts/LibreBaskerville-Italic.ttf),
+       url(../fonts/LibreBaskerville-Bold.ttf),
+       url(../fonts/LibreBaskerville-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "Philosopher";
+  src: url(../fonts/Philosopher-Regular.ttf),
+       url(../fonts/Philosopher-Italic.ttf),
+       url(../fonts/Philosopher-Bold.ttf),
+       url(../fonts/Philosopher-BoldItalic.ttf);
+}
+
+/* Body */
+@font-face {
+  font-family: "Raleway";
+  src: url(../fonts/Raleway-Regular.ttf),
+       url(../fonts/Raleway-Italic.ttf),
+       url(../fonts/Raleway-Bold.ttf),
+       url(../fonts/Raleway-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf),
+       url(../fonts/Roboto-Italic.ttf),
+       url(../fonts/Roboto-Bold.ttf),
+       url(../fonts/Roboto-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  src: url(../fonts/LibreFranklin-Regular.ttf),
+       url(../fonts/LibreFranklin-Italic.ttf),
+       url(../fonts/LibreFranklin-Bold.ttf),
+       url(../fonts/LibreFranklin-BoldItalic.ttf);
+}
+
+/* Monospace */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url(../fonts/RobotoMono-VariableFont_wght.ttf),
+       url(../fonts/RobotoMono-Italic-VariableFont_wght.ttf);       
+}
+
+
+/* FONT FAMILIES
+A fontFamily CSS class assigns three font families, and a default font size. fontFamily0 is the default. */
+.fontFamily0 {
+  --heading-font-family: 'Michroma';
+  --paragraph-font-family: 'Raleway';
+  --mono-font-family: 'Roboto Mono';
+  --root-font-size: 16px;
+}
+
+.fontFamily1 {
+  --heading-font-family: 'Libre Baskerville';
+  --paragraph-font-family: 'Roboto';
+  --mono-font-family: 'Roboto Mono';
+  --root-font-size: 16px;
+}
+
+.fontFamily2 {
+  --heading-font-family: 'Philosopher';
+  --paragraph-font-family: 'Libre Franklin';
+  --mono-font-family: 'Roboto Mono';
+  --root-font-size: 16px;
+}
+
+/* COLOR THEMES
+/* Sunny Gray (colorTheme0 = default) */
+.colorTheme0 {
+  --color-surface01: hsl(0, 0%, 83%);
+  --color-surface02: hsl(0, 0%, 80%);
+  --color-surface03: hsl(0, 0%, 95%);
+
+  --color-text-s01: black;
+  --color-text-s02: black;
+  --color-text-s03: black;
+
+  --color-h1-h6-s01: hsl(190, 100%, 22%);
+  --color-h1-h6-s02: hsl(190, 100%, 22%);
+  --color-h1-h6-s03: hsl(190, 100%, 22%);
+
+
+  --color-accent01: hsl(190, 100%, 32%);
+  --color-accent02: hsl(188, 100%, 42%);
+  --color-accent03: hsl(188, 100%, 72%);
+
+  --color-text-a01: white;
+  --color-text-a02: black;
+  --color-text-a03: black;
+
+  --color-h1-h6-a01: hsl(188, 100%, 42%);
+  --color-h1-h6-a02: hsl(188, 100%, 12%);
+  --color-h1-h6-a03: hsl(188, 100%, 12%);
+
+  --color-doc-title: hsl(190, 100%, 32%);
+  --border-color: hsl(0, 0%, 90%);
+  --card-border-color: hsl(0, 0%, 40%);
+}
+
+/* Stormy Gray */
+.colorTheme1 {
+  --color-surface01: hsl(0, 0%, 50%);
+  --color-surface02: hsl(0, 0%, 60%);
+  --color-surface03: hsl(0, 0%, 90%);
+
+  --color-text-s01: var(--white);
+  --color-text-s02: var(--white);
+  --color-text-s03: var(--black);
+
+  --color-h1-h6-s01: hsl(188, 100%, 12%);
+  --color-h1-h6-s02: black;
+  --color-h1-h6-s03: hsl(188, 100%, 32%);
+
+  --color-accent01: hsl(188, 100%, 22%);
+  --color-accent02: hsl(188, 100%, 32%);
+  --color-accent03: hsl(188, 100%, 42%);
+
+  --color-text-a01: white;
+  --color-text-a02: black;
+  --color-text-a03: black;
+
+  --color-h1-h6-a01: hsl(188, 100%, 42%);
+  ;
+  --color-h1-h6-a02: hsl(188, 100%, 12%);
+  --color-h1-h6-a03: hsl(188, 100%, 12%);
+
+  --color-doc-title: white;
+  --border-color: hsl(0, 0%, 80%);
+  --card-border-color: hsl(0, 0%, 40%);
+}
+
+/* Thunderhead */
+.colorTheme2 {
+  --color-surface01: hsl(199, 28%, 29%);
+  --color-surface02: hsl(200, 18%, 40%);
+  --color-surface03: hsl(200, 25%, 92%);
+
+  --color-text-s01: hsl(0, 0%, 95%);
+  --color-text-s02: hsl(0, 0%, 88%);
+  --color-text-s03: black;
+
+  --color-h1-h6-s01: hsl(199, 28%, 10%);
+  --color-h1-h6-s02: hsl(199, 28%, 10%);
+  --color-h1-h6-s03: hsl(199, 28%, 29%);
+
+  --color-accent01: hsl(188, 100%, 35%);
+  --color-accent02: hsl(188, 100%, 42%);
+  --color-accent03: hsl(188, 100%, 69%);
+
+  --color-text-a01: hsl(0, 0%, 100%);
+  --color-text-a02: black;
+  --color-text-a03: black;
+
+  --color-h1-h6-a01: hsl(199, 28%, 10%);
+  --color-h1-h6-a02: hsl(199, 28%, 10%);
+  --color-h1-h6-a03: hsl(199, 28%, 29%);
+
+  --color-doc-title: white;
+  --border-color: hsl(0, 0%, 60%);
+  --card-border-color: hsl(0, 0%, 40%);      
+}
+
+/* Manilla */
+.colorTheme3 {
+  --color-surface01: hsl(29, 17%, 76%);
+  --color-surface02: rgb(242, 223, 207);
+  --color-surface03: rgb(255, 241, 229);
+
+  --color-text-s01: black;
+  --color-text-s02: black;
+  --color-text-s03: black;
+
+  --color-h1-h6-s01: hsl(185, 82%, 28%);
+  --color-h1-h6-s02: hsl(210, 82%, 33%);
+  --color-h1-h6-s03: hsl(340, 82%, 33%);
+
+  --color-accent01: hsl(340, 82%, 33%);
+  --color-accent02: hsl(210, 82%, 33%);
+  --color-accent03: hsl(0, 0%, 2%);
+
+  --color-text-a01: hsl(0, 0%, 100%);
+  --color-text-a02: hsl(0, 0%, 100%);
+  --color-text-a03: hsl(0, 0%, 100%);
+
+  --color-h1-h6-a01: hsl(0, 0%, 100%);
+  --color-h1-h6-a02: hsl(0, 0%, 100%);
+  --color-h1-h6-a03: hsl(0, 0%, 100%);
+
+  --color-doc-title: hsl(340, 82%, 33%);
+  --nav-border-color: hsl(0, 0%, 100%);
+  --card-border-color: hsl(0, 0%, 40%);
+}
+
+/* Spruce */
+.colorTheme4 {
+  --color-surface01: hsl(171, 54%, 20%);
+  --color-surface02: hsl(171, 54%, 25%);
+  --color-surface03: hsl(171, 54%, 95%);
+
+  --color-text-s01: white;
+  --color-text-s02: white;
+  --color-text-s03: black;
+
+  --color-h1-h6-s01: hsl(171, 54%, 75%);
+  --color-h1-h6-s02: hsl(171, 54%, 75%);
+  --color-h1-h6-s03: hsl(171, 54%, 10%);
+
+  --color-accent01: hsl(171, 54%, 35%);
+  --color-accent02: hsl(171, 39%, 47%);
+  --color-accent03: hsl(171, 39%, 77%);
+
+  --color-text-a01: white;
+  --color-text-a02: black;
+  --color-text-a03: black;
+
+  --color-h1-h6-a01: hsl(199, 28%, 10%);
+  --color-h1-h6-a02: hsl(199, 28%, 10%);
+  --color-h1-h6-a03: hsl(199, 28%, 20%);
+
+  --color-doc-title: white;
+  --border-color: hsl(0, 0%, 60%);
+  --card-border-color: hsl(0, 0%, 40%);
+}
+
+/* Batcave */
+.colorTheme5 {
+  --color-surface01: hsl(0, 0%, 10%);
+  --color-surface02: hsl(0, 0%, 14%);
+  --color-surface03: hsl(0, 0%, 18%);
+
+  --color-text-s01: hsl(0, 0%, 80%);
+  --color-text-s02: hsl(0, 0%, 80%);
+  --color-text-s03: hsl(0, 0%, 80%);
+
+  --color-h1-h6-s01: hsl(0, 100%, 45%);
+  --color-h1-h6-s02: hsl(0, 100%, 45%);
+  --color-h1-h6-s03: hsl(0, 100%, 45%);;
+
+  --color-accent01: hsl(332, 93%, 52%);
+  --color-accent02: hsl(180, 100%, 30%);
+  --color-accent03: hsl(244, 90%, 65%);
+
+  --color-text-a01: white;
+  --color-text-a02: white;
+  --color-text-a03: white;
+
+  --color-h1-h6-a01: hsl(0, 0%, 80%);
+  --color-h1-h6-a02: hsl(0, 0%, 80%);
+  --color-h1-h6-a03: hsl(0, 0%, 80%);
+
+  --color-doc-title: hsl(0, 100%, 40%);
+  --border-color: hsl(0, 0%, 30%);
+  --card-border-color: hsl(0, 0%, 30%);
+}
+
+/* Radium */
+.colorTheme6 {
+  --color-surface01: hsl(0, 0%, 10%);
+  --color-surface02: hsl(0, 0%, 15%);
+  --color-surface03: hsl(0, 0%, 25%);
+
+  --color-text-s01: hsl(0, 0%, 80%);
+  --color-text-s02: hsl(0, 0%, 80%);
+  --color-text-s03: hsl(0, 0%, 80%);
+
+  --color-h1-h6-s01: hsl(103, 100%, 40%);
+  --color-h1-h6-s02: hsl(103, 100%, 40%);
+  --color-h1-h6-s03: hsl(103, 100%, 40%);
+
+  --color-accent01: hsl(332, 93%, 52%);
+  --color-accent02: hsl(180, 100%, 30%);
+  --color-accent03: hsl(244, 90%, 65%);
+
+  --color-text-a01: white;
+  --color-text-a02: white;
+  --color-text-a03: white;
+
+  --color-h1-h6-a01: hsl(0, 0%, 80%);
+  --color-h1-h6-a02: hsl(0, 0%, 80%);
+  --color-h1-h6-a03: hsl(0, 0%, 80%);
+
+  --color-doc-title: hsl(103, 100%, 40%);
+  --border-color: hsl(0, 0%, 30%);
+  --card-border-color: hsl(0, 0%, 30%);
+}
+
+:root {
+  /* ASSIGNMENT OF COLORS */
+  /* TBD: Descibe color surface colors are assigned to layout elements*/
+  --header-surface: var(--color-surface01);
+  --footer-surface: var(--color-surface01);
+
+  --nav-surface: var(--color-surface02);
+  --aside-surface: var(--color-surface02);
+  --section-surface: var(--color-surface02);
+
+  --main-surface: var(--color-surface03);
+  --article-surface: var(--color-surface03);
+
+  --btn-hover: var(--color-surface02);
+  --btn-active: var(--color-surface02);
+
+  --link-hover: var(--journey-blue);
+  --link-active: var(--journey-red);
+
+  /* grayscale */
+  --black: hsl(0, 0%, 0%);
+  --gray10: hsl(0, 0%, 10%);
+  --gray20: hsl(0, 0%, 20%);
+  --gray30: hsl(0, 0%, 30%);
+  --gray40: hsl(0, 0%, 40%);
+  --gray50: hsl(0, 0%, 50%);
+  --gray60: hsl(0, 0%, 60%);
+  --gray70: hsl(0, 0%, 70%);
+  --gray80: hsl(0, 0%, 80%);
+  --gray90: hsl(0, 0%, 90%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Journey logo Colors */
+  --journey-red: hsl(0, 100%, 50%);
+  --Journey-blue: hsl(240, 100%, 50%);
+
+  /* shadows */
+  /* shadow: h-offset, v-offset, blur, transparent color */
+  --shadow: 3px 2px 6px hsla(0, 0%, 0%, 0.3);
+  --inverse-shadow: -3px -2px 6px rgba(0, 0, 0, 0.5);
+}

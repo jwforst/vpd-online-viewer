@@ -1,0 +1,783 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========================= Notes ========================= */
+/* Grid layout terms:
+    container, column, row, track, line, area, cell, and item. */
+
+/* ===== ===== ===== ===== Semantic tags ===== ===== ===== ===== */
+/* Semantic tags aid developers and user agents like browsers, search engines, screen readers to understand context and meaning of content.
+    <article> <aside> <details> <figcaption> <figure> <footer> <header> <main> <mark> <nav> <section> <summary> <time> */
+
+/* ===== ===== ===== <article> ===== ===== ===== */
+/* Article: Contains a complete, self-contained, topic or story. Able to stand alone.*/
+
+/* ===== ===== ===== <aside> ===== ===== ===== */
+/* Aside: Provides supplimental information indirectly related to the primary topic, for example, background information, or information and access to a product or a service.*/
+aside {
+  overflow: hidden;
+  padding: 1rem;
+  color: var(--color-text-s02);
+  background-color: var(--color-surface02);
+  box-shadow: var(--shadow);
+}
+
+/* ===== ===== ===== <details> ===== ===== ===== */
+
+/* ===== ===== ===== <figcaption> ===== ===== ===== */
+figcaption {
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  line-height: 105%;
+  word-break: normal;
+  margin: 0.25rem 2.5rem 0.25rem 2.5rem;
+  padding: 0rem;
+  color: var(--color-text-s03);
+}
+
+/* ===== ===== ===== <figure> ===== ===== ===== */
+figure {
+  display: flex;
+  flex-flow: column;
+  max-width: 100%;
+  height: auto;
+  margin: 0.25rem 2.5rem 0.75rem 2.5rem;
+  padding: 0rem;
+  border: 1px;
+  border-style: solid;
+  border-color: var(--card-border-color);
+}
+
+figure.borderless {
+  margin: 0.25rem 2.5rem 0.75rem 2.5rem;
+  border: none;
+}
+
+/* ===== ===== ===== <footer> ===== ===== ===== */
+footer {
+  display: flex;
+  flex-direction: row;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--fontlight);
+  background-color: var(--footer-surface);
+  grid-area: foot;
+}
+
+/* ===== ===== ===== <header> ===== ===== ===== */
+header {
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  overflow: hidden;
+  background-color: var(--header-surface);
+  box-shadow: var(--shadow);
+}
+
+/* ===== ===== ===== <div.drawer> ===== ===== ===== */
+div.drawer {
+  display: flex;
+  z-index: 0;
+  flex-direction: row;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--main-surface);
+}
+
+/* ===== ===== ===== <main> ===== ===== ===== */
+main{
+  width: 100%;
+  padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--color-surface03);
+}
+
+/* ===== ===== ===== aside-area for toc ===== ===== ===== */
+.aside-area-toc {
+  z-index: 1;
+  flex-basis: 350px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0rem;
+  padding: 0rem;
+  overflow-y: auto;
+  background-color: var(--nav-surface);
+}
+
+/* aside transitions (btn click) */
+.aside-area-toc {
+  margin-left: 0px;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+
+/* ===== ===== ===== aside-area for setup ===== ===== ===== */
+.aside-area-setup {
+  z-index: 0;
+  flex-basis: 350px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0rem;
+  padding: 0rem;  
+  /* top: 4rem; */
+  overflow-y: auto;
+  background-color: var(--nav-surface);
+}
+
+/* aside transitions (btn click) */
+.aside-area-setup {
+  margin-left: 0px;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+
+/* ===== ===== ===== <section> ===== ===== ===== */
+/* Create a section with a multi-column grid */
+/* xxl if width > 1600 px*/
+.section-2-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: min-content;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "her0 sho1";
+} 
+
+.section-3-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: min-content;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "sho0 sho1 sho2";
+}
+
+
+.section-3x2-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: min-content;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "sho0 sho1 sho2"
+    "sho3 sho4 sho5";
+}
+
+.section-3x3-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-rows: min-content;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "sho0 sho1 sho2"
+    "sho3 sho4 sho5"
+    "sho6 sho7 sho8";
+}
+
+.section-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: min-content;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "her0 her0 sho1";
+}
+
+/* ===== ===== ===== <summary> ===== ===== ===== */
+
+/* ===== ===== ===== <time> ===== ===== ===== */
+
+
+/* ===== ===== ===== ===== CSS Widgets ===== ===== ===== =====  */
+/* CSS Layout containers (CSS widgets) are classes that are used to contain and style content so that it stands out from normal content flow.
+
+ /* ===== ===== ===== Hero ===== ===== ===== */
+/* Hero widget: Contains a larger image, sometimes with overlay text, that draws attention and conveys an idea of what the page is about. Typically located at the top of a page. */
+.hero0 {
+  grid-area: her0;
+}
+
+.hero1 {
+  grid-area: her1;
+}
+
+.hero2 {
+  grid-area: her2;
+}
+
+.hero3 {
+  grid-area: her2;
+}
+
+/* ===== ===== ===== showcase ===== ===== ===== */
+/* Showcase widget: Contains overview information consisting of text with optional smaller images. */
+.showcase0 {
+  grid-area: sho0;
+}
+
+.showcase1 {
+  grid-area: sho1;
+}
+
+.showcase2 {
+  grid-area: sho2;
+}
+
+.showcase3 {
+  grid-area: sho3;
+}
+
+/* ===== ===== ===== Card ===== ===== ===== */
+/* Card widget: Serves as a decorative container for content should stand out of normal content flow. */
+.card0 {
+  grid-area: crd0;
+}
+
+.card1 {
+  grid-area: crd1;
+}
+
+.card2 {
+  grid-area: crd2;
+}
+
+.card3 {
+  grid-area: crd2;
+}
+
+.toc-card,
+.doc-info-card,
+.settings-card {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 1px, 1px, 1rem, 1px;
+  border-width: 3px;
+  border-style: none none groove none;
+  border-color: var(--nav-border-color);
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0;
+  border-width: 1px;
+  border-style: none none dotted none;
+  border-color: var(--nav-border-color);
+}
+
+.section-card {
+  display: grid;
+  width: auto;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: var(--text-color);
+}
+
+/* ===== ===== ===== Card Styles ===== ===== ===== */
+/* Use card styles to apply decorative styling to widget containers including hero, showcase, card, and chip widgets. */
+.widget-accent01 {
+  width: 100%;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: var(--color-text-a01);
+  background-color: var(--color-accent01);
+  box-shadow: var(--shadow);
+}
+
+.widget-accent02 {
+  width: 100%;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: var(--color-text-a02);
+  background-color: var(--color-accent02);
+  box-shadow: var(--shadow);
+}
+
+.widget-accent03 {
+  width: 100%;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: var(--color-text-a02);
+  background-color: var(--color-accent03);
+  box-shadow: var(--shadow);
+}
+
+/* ===== ===== ===== Chip ===== ===== ===== */
+/* Chip widget: Similar to a card except smaller, containing a word or short statement. */
+.chip0 {
+  grid-area: chp0;
+}
+
+.chip1 {
+  grid-area: chp1;
+}
+
+.chip2 {
+  grid-area: chp2;
+}
+
+.chip3 {
+  grid-area: chp3;
+}
+
+/* ===== ===== ===== ===== Images ===== ===== ===== ===== */
+img {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+}
+
+/* Sets the max logo size  */
+img.logo {
+  max-width: 170px;
+}
+
+img.icon {
+  width: auto;
+  height: 25px;
+  padding: 0px;
+}
+
+/* ===== ===== ===== ===== input ===== ===== ===== ===== */
+input {
+  cursor: pointer;
+}
+
+/* #themeBtn1 {
+  color: var(--color-text-s02);
+} */
+*/
+
+/* ===== ===== ===== ===== tables ===== ===== ===== ===== */
+table,
+th,
+td {
+  border: 1px solid var(--card-border-color);
+  border-collapse: collapse;
+}
+
+table {
+  margin: 0.25rem 0rem 0.75rem 2.5rem;
+}
+
+th {
+  font-family: var(--paragraph-font-family);
+  line-height: 105%;
+  color: var(--color-text-a01);
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  /* overflow: hidden; */
+  word-break: normal;
+  background-color: var(--color-accent01);
+  padding: 0.5rem;
+}
+
+td {
+  font-family: var(--paragraph-font-family);
+  line-height: 105%;
+  color: var(--color-text-s03);
+  text-align: left;
+  /* overflow: hidden; */
+  background-color: var(--color-surface03);
+  padding: 0.5rem;
+}
+
+div.responsive {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+/* ===== ===== ===== table caption ===== ===== ===== */
+caption {
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  line-height: 105%;
+  word-break: normal;
+  margin: 0.25rem 0rem 0.25rem 0rem;
+  padding: 0rem;
+  color: var(--color-text-s03);
+}
+
+/* ===== ===== fieldset in form in settings card ===== ===== */
+fieldset.fieldset-flex {
+  display: flex;
+  flex-direction: column;
+  border: 0px;
+  border-style: groove;
+  border-radius: 2px;
+
+}
+
+/* A section element without a background color. */
+section.clear0 {
+  grid-area: clr0;
+  color: var(--fontlight);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+section.clear1 {
+  grid-area: clr1;
+  color: var(--fontlight);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+section.edit-in {
+  grid-area: editi;
+  padding: 0rem;
+  border-radius: 10px;
+  background-color: var(--articlecolor);
+}
+
+section.edit-out {
+  display: block;
+  grid-area: edito;
+  padding: 0rem;
+  border-radius: 10px;
+  background-color: var(--articlecolor);
+}
+
+/* ===== ===== ===== ===== textarea ===== ===== ===== ===== */
+textarea.editor {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  border-color: var(--articlecolor);
+  background-color: var(--article-surface);
+}
+
+/* ===== ===== ===== ===== body ===== ===== ===== ===== */
+body {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--article-surface);
+  font-size: var(--root-font-size);
+}
+
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas:
+    "head"
+    "main"
+    "foot";
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem 1fr;
+  grid-template-areas:
+    "tool"
+    "main";
+}
+
+/* ===== ===== body media checks ===== ===== */
+/* @media (max-width: 550px) {
+  .body-grid {
+    grid-template-rows: 3.7rem 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .body-grid {
+    grid-template-rows: 3.4rem 1fr;
+  }
+} */
+
+/* ===== end body ===== */
+
+
+
+
+/* ===== ===== ===== Header divs ===== ===== ===== */
+/* Defines width in percent for the three content areas in the header */
+div.control-area {
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  min-width: 205px;
+}
+
+div.title-area {
+  width: auto;
+}
+
+div.logo-area {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  max-width: 170px;
+}
+
+/* ===== ===== ===== header @media ===== ===== ===== */
+@media (min-width: 901px) {
+  div.control-area {
+    max-width: 170px;
+  }
+
+  div.title-area {
+    width: auto;
+  }
+
+  div.logo-area {
+    min-width: 170px;
+  }
+
+  h1.doc-title {
+    /* font-size: 1.1rem; */
+    font-size: calc(1.1rem * var(--heading-factor));
+
+  }
+}
+
+@media (max-width: 900px) {
+  div.control-area {
+    max-width: 150px;
+  }
+
+  div.title-area {
+    width: auto;
+  }
+
+  div.logo-area {
+    min-width: 150px;
+  }
+
+  h1.doc-title {
+    /* font-size: 1.0rem; */
+    font-size: calc(1rem * var(--heading-factor));
+  }
+}
+
+@media (max-width: 750px) {
+  div.control-area {
+    max-width: 140px;
+  }
+
+  div.title-area {
+    width: auto;
+  }
+
+  div.logo-area {
+    width: 140px;
+  }
+
+  h1.doc-title {
+    /* font-size: 0.9rem; */
+    font-size: calc(0.92rem * var(--heading-factor));
+  }
+}
+
+@media (max-width: 660px) {
+  div.control-area {
+    max-width: 130px;
+  }
+
+  div.title-area {
+    width: auto;
+  }
+
+  div.logo-area {
+    min-width: 130px;
+  }
+
+  h1.doc-title {
+    /* font-size: 0.8rem; */
+    font-size: calc(0.85rem * var(--heading-factor));
+  }
+}
+
+@media (max-width: 550px) {
+  div.control-area {
+    max-width: 120px;
+  }
+
+  div.title-area {
+    width: auto;
+  }
+
+  div.logo-area {
+    min-width: 120px;
+  }
+
+  h1.doc-title {
+
+    font-size: calc(0.8rem * var(--heading-factor));
+  }
+}
+
+@media (max-width: 450px) {
+  div.control-area {
+    max-width: 110px;
+  }
+
+  div.title-area {
+    width: auto;
+  }
+
+  div.logo-area {
+    max-width: 250px;
+  }
+
+  h1.doc-title {
+    /* font-size: 0.7rem; */
+    font-size: calc(0.75rem * var(--heading-factor));
+  }
+}
+
+@media (max-width: 360px) {
+  div.control-area {
+    max-width: 100px;
+  }
+
+  div.title-area {
+    max-width: 310px;
+  }
+
+  div.logo-area {
+    min-width: 100px;
+  }
+
+  h1.doc-title {
+    /* font-size: 0.6rem; */
+    font-size: calc(0.7rem * var(--heading-factor));
+  }
+}
+
+/* ===== ===== ===== ===== theme display setup ===== ===== ===== ===== */
+/* For development. Shows all colors as a chip inside a section card.  */
+.theme-display-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 0.25rem 0rem 0.75rem 0rem;
+}
+
+.theme-display-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 0.25rem 0rem 0.75rem 2.5rem;
+}
+
+.color-chip-pair {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 12.4rem;
+  height: auto;
+  border-radius: 5px;
+}
+
+.color-chip {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: auto;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  border: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--card-border-color);
+}
+
+label,
+Legend {
+  color: var(--color-text-s02);
+}
+
+/* ===== ===== ===== ===== buttons ===== ===== ===== ===== */
+/* ===== ===== ===== icon button ===== ===== =====  */
+.button-area {
+  display: flex;
+  padding: 0px 0.5rem 0px 0.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border-width: 0px;
+  background-color: transparent;
+}
+
+.button-area:hover {
+  background-color: var(--btn-hover);
+}
+
+.button-area:active {
+  background-color: var(--btn-active);
+}
+
+/* ===== ===== ===== radio button ===== ===== =====  */
+.radio-label {
+  margin: 0.25rem 3rem 0.75rem 0rem;
+}
+
+/* ===== ===== ===== text buttons ===== ===== =====  */
+button.text-button {
+  font-family: var(--paragraph-font-family);
+  font-size: 0.9rem;
+  float: right;
+  padding: 0.3rem;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: var(--gray50);
+  cursor: pointer;
+  color: var(--color-text-s01);
+  background-color: var(--color-surface01);
+}
+
+button.text-button:hover {
+  background-color: var(--btn-hover);
+}
